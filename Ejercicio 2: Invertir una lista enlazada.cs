@@ -1,0 +1,15 @@
+public void Invertir()
+{
+    Nodo anterior = null;
+    Nodo actual = cabeza;
+    Nodo siguiente = null;
+
+    while (actual != null)
+    {
+        siguiente = actual.Siguiente;
+        actual.Siguiente = anterior;
+        anterior = actual;
+        actual = siguiente;
+    }
+    cabeza = anterior;
+}
